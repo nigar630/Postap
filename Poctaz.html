@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document-pochtaz</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <style> 
+        html{
+            /* background: url(https://www.pochtap.az/Images/map.png) no-repeat center fixed;
+            min-height: 600px;
+            display: block; */
+            background-image: url(https://www.pochtap.az/Images/map.png);
+            background-color:cadetblue;
+            min-height: 600px;
+            display: block;
+            background-repeat: no-repeat;
+        }           
+            body{
+                margin: 0px;
+                padding: 0px;
+
+            }
+            header{
+                width: 90%;
+                margin: auto;
+                margin-top: 10px;
+                
+            }
+            nav{
+                margin: 0;
+                padding: 0;
+                
+            }
+            nav ul li img{
+                width: 120px;
+                height: 50px;
+                border-radius: 8px;
+            }
+           ul li{
+                list-style-type: none;
+                display: block;
+            }
+            ul li a{
+                display: inline-block;
+                text-decoration: none;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            p, h1,h5,h4,span{
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .left {
+                float: left;
+            }
+           .left li{
+                float: left;
+            }
+            .left .icon{
+                margin-left: 80px;
+                font-size: 2em;
+                margin-top: 10px;
+            }
+            .left .icon span{
+                color: white;
+            }
+            .left .icon i{
+                color: white;
+                transform: rotate(-45deg);
+            }
+            .left .dropdown{
+                color: white;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+                /* background-color: aqua; */
+                font-size: 0.5em;
+                margin-left: 40px;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                min-width: 80px;
+                padding: 0px 0px;
+                z-index: 1;
+                
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+                cursor: pointer;
+            }
+            .search{
+                width: 200px;
+                height: 50px;
+                background-color:orange;
+                float: right;
+                position: relative;
+                margin-top: 20px;
+            }
+            .iconsearch{
+                position: absolute;
+                left: 20px;
+                bottom:15px;
+            }
+            .telo{
+                width: 80%;
+                margin: auto;
+                display: flex;
+                
+            }
+            .leviy{
+                width: 70%;
+                margin-top: 100px;
+                padding-right: 100px;
+                display: inline-block;
+                margin-right: 40px;
+            }
+            .praviy{
+                width: 30%;
+                float: right;
+                margin-bottom: 40px;
+                margin-top: 50px;
+            }
+            .leviy h1,p{
+                color: white;
+            }
+            .leviy i{
+                color: orange;
+            }
+            .box{
+                width: 400px;
+                height: 380px;
+                background-color:whitesmoke;
+                padding-top: 40px;
+            }
+            .container-box{
+                width: 80%;
+                margin: auto;
+            }
+            .container-box i{
+                color: darkorange;
+            }
+            .subtitle{
+                padding: 20px 80px;
+            }
+            .uvedomleniye{
+                margin-right: 10px;
+            }
+            .senedqrup{
+                width: 200px;
+                height: 30px;
+                padding-bottom: 10px;
+                margin-top: 18px;
+                margin-bottom: 18px;
+            }
+            .username,.usersurname{
+                width: 200px;
+                height: 30px;
+                margin: 20px;
+            }
+            .text{
+                margin-right: 40px;
+            }
+            .miniboxinbox{
+                width: 200px;
+                height: 40px;
+                background-color: orange;
+                margin-top: 40px;
+                text-align: center;
+                font-size: 2em;
+            }
+            .language{
+                color: darkorange;
+                width: 100px;
+                height: 50px;
+                margin-bottom: 40px;
+            }
+            .left li{
+                font-size: 3em;
+            }
+            .lastdoc h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .bigdivtwo{
+            width: 90%;
+            margin: auto;
+            background-color:whitesmoke;
+            background-size: cover;
+            margin-top: 140px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .container div{
+            border: 1px solid black;
+            width: 22%;
+            height: 134px;
+            margin: 14px 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container div:hover{
+            border-color: lightcoral;
+            cursor: pointer;
+            /* -webkit-box-shadow: -8px 8px 35px -10px rgba(235,76,102,1);
+-moz-box-shadow: -8px 8px 35px -10px rgba(235,76,102,1);
+box-shadow: -8px 8px 35px -10px rgba(235,76,102,1); */
+              box-shadow: 5px 5px 3px 3px darksalmon;
+}
+        .divbox1,.divbox2,.divbox3, .divbox4, .divbox5,.divbox6,.divbox7,.divbox8{
+            background-color: white;
+        }
+        .container i{
+            font-size: 4em;
+        }
+        h3{
+            display: inline-block;
+        }
+        .containermore{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        a{
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+        }
+        .more button{
+            width: 148px;
+            height: 40px;
+            border-radius: 6px;
+            border-color: orangered;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            align-items: center;
+            list-style-type: none;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        .bigiconscontainer{
+          
+            width: 80%;
+            margin: auto;
+            padding-top: 54px;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            background-color: white;
+        
+        }
+        .bigiconscontainer.iconone,.bigcontainer.icontwo, .bigcontainer.iconthree{
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: center;
+            justify-content:center;
+          
+        }
+        .iconone h4, .icontwo h4, .iconthree h4{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;     
+        }
+         .iconone img{
+            margin-left: 40px;
+        }
+        .icontwo img{
+            margin-left: 120px;
+            margin-top: 10px;
+        }
+        .iconthree img{
+            margin-left:120px;
+        }
+        .footercontainer{
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+        .leftfoot{
+            width: 40%;
+            height: 100px;
+            display: flex;
+            margin-top: 40px;
+        }
+        .leftfoot i{
+            font-size: 2em;
+        }
+        .leftfoot span{
+            width: 280px;
+            height: 60px;
+            margin-left: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+            display: flex;
+            /* background-color: brown; */
+        }
+         .poct{
+            width: 400px;
+            height: 40px;
+            margin-left:40px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+        } 
+        .poct span{
+            width: 80px;
+            height: 20px;
+            display: flex;
+            /* background-color: aqua; */
+        }
+        .rightfoot{
+            width: 100px;
+            height: 20px;
+            display: flex;
+            float: right;
+            /* background-color: darkgoldenrod; */
+            margin-top: 40px;
+            margin-left: 300px;
+        }
+        .rightfoot i{
+            color: darkorange;
+            transform: rotate(-45deg);
+        }
+
+        /* For Tablet */
+@media screen and (max-width: 990px){
+    .left, .right{
+        width: 100%;
+    }
+    header nav .left .logo, .icon, .lang, .search{
+        float: left;
+    }
+    header nav .search{
+        margin-left: 40px;
+    }
+   html{
+    background-image:none;
+    background-color:cadetblue;
+   }
+   .telo{
+       display: flex;
+       flex-direction: column;
+   }
+   .telo .leviy, .praviy{
+       width: 100%;
+   }
+   .telo .praviy .box{
+       width: 100%;
+   }
+   .telo .praviy .box .container-box{
+       width: 100%;
+   }
+   .praviy .box .container-box .subtitle{
+       text-align: center;
+   }
+   .praviy .box .container-box .senedqrup {
+       width: 80%;
+       margin: auto;
+   }
+   .praviy .box .username input, .usersurname input{
+       width: 440px;
+       height: 20px;
+   }
+   .praviy .box .miniboxinbox{
+       width: 90%;
+       margin: auto;
+   }
+    .bigdivtwo .container div{
+        width: 42%;
+    }
+    .bigiconscontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .bigiconscontainer .iconone img{
+        padding-left: 160px;
+    }
+    .bigiconscontainer .icontwo img {
+        padding-left: 120px;
+    }
+    .bigiconscontainer .iconthree img{
+        padding-left: 120px;
+    } 
+    .footercontainer {
+        width: 60%;
+        margin-left: 20px;
+    }
+    .footercontainer .leftfoot{
+        width: 320px;
+    }
+    .footercontainer .rightfoot{
+        
+        float: left;
+        margin-left: 10px;
+    }
+
+}
+/* For Mobile */
+@media screen and (max-width: 500px){
+    .left,.right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    header nav .left .logo img{
+        width: 100px;
+        height: auto;
+        margin-left: -30px;
+    }
+    header nav .left .logo, .icon {
+        float: left;
+        /* margin-left: 5px; */
+    }
+    header nav .left .icon{
+        font-size: 1.5em;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    
+    header .left{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    header nav .search{
+        margin-left: 10px;
+    }
+   
+    
+   html{
+    background-image:none;
+    background-color:cadetblue;
+   }
+   .telo{
+       display: flex;
+       flex-direction: column;
+   }
+   .telo .leviy, .praviy{
+       width: 100%;
+   }
+   .telo .praviy .box{
+       width: 100%;
+   }
+   .telo .praviy .box .container-box{
+       width: 100%;
+   }
+   .praviy .box .container-box .subtitle{
+       text-align: center;
+   }
+   .praviy .box .container-box .senedqrup {
+       width: 80%;
+       margin: auto;
+   }
+   .praviy .box .username input, .usersurname input{
+       width: 170px;
+       height: 20px;
+   }
+   .praviy .box .miniboxinbox{
+       width: 70%;
+       margin: auto;
+   }
+    .bigdivtwo .container div{
+        width: 80%;
+    }
+    .bigiconscontainer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .bigiconscontainer .iconone img{
+        padding-left: 34px;
+    }
+    .bigiconscontainer .icontwo img {
+        padding: 0px;
+        margin-left: 70px;
+    }
+    .bigiconscontainer .iconthree img{
+        padding:0px;
+        margin-left:80px;
+    } 
+    .footercontainer {
+        width: 100%;
+        margin: 0px;
+    }
+    .footercontainer .leftfoot{
+        width: 150px;
+    }
+    .footercontainer .rightfoot{
+        float: left;
+        margin-left: 0px;
+    }
+    .footercontainer .rightfoot {
+        display:block;
+    }
+    
+    
+    }
+        </style>
+    </head>
+    <body>
+            
+        <div class="bigdiv">
+                
+        <header>
+            <nav>
+                    <div class="left">
+                <ul>
+                        <li class="logo"><a href=""><img src="data:image/png;base64,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" alt="logo"></a></li>
+                        <li class="icon"><a href=""><i class="fas fa-phone-volume"></i><span>169</span></a></li>
+                        <li class="lang"><a href=""></a>
+                            <!-- <select class="language" name="AZE">
+                                <option>AZE</option>
+                                <option>RUS</option>
+                                <option>ENG</option>
+                            </select> -->
+                        <div class="dropdown">
+                            <span>AZE<i class="fas fa-angle-down"></i></span>
+                            <div class="dropdown-content">
+                                <p>RUS</p>
+                                 <p>ENG</p>
+                            </div>
+                        </div>
+                        </li>
+                    </div>
+                </ul>
+                <div class="search">
+                    <ul>
+                        <li class="iconsearch"><a href=""><i class="fas fa-search"></i></a></li>
+                        <li class="seneditir"><a href="">Sənədimi İtirmişəm</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="telo">       
+            <div class="leviy">
+                    <div class="hone"><h1>İTIRILMIŞ SƏNƏDLƏRİN TAPILMASI XİDMƏTİ</h1></div>
+                    <p class="one"><i class="fas fa-check"></i>İtirilmiş sənədələrin məlumatlarının sayta daxil edilməsi</p>
+                    <p class="two"><i class="fas fa-check"></i>Itirdiyiniz sənədin tapılıb tapılmadıgı haqqında məlumat əldə etmək</p>
+                    <p class="three"><i class="fas fa-check"></i>Tapılmış sənədinizi göstərilən poçt şöbəsinə yaxınlaşaraq təhvil götürülməsi</p>
+                    <p class="four"><i class="fas fa-check"></i>Tapılmış sənədin istenilən poçt şöbəsinə təqdim edilməsi</p>
+            </div>
+            <div class="praviy">
+                <div class="box">
+                    <div class="container-box">
+                        <div class="subtitle"><a href=""><b>SƏNƏD AXTAR</b></a></div>
+                        <ul>
+                            <div class="uvedomleniye"><li><a href=""><i class="fas fa-exclamation-circle"></i>Məlumatlar yalnız sənəddə olduğu kimi daxil edilməlidir:</a></li></div>
+                            <select class="senedqrup">
+                                <option>-Sənədin qrupu-</option>
+                                <option>şəxsiyyət vəsiqəsini təstiq edən sənədlər</option>
+                                <option>Vəsiqələr</option>
+                                <option>Təstiq sənədləri</option>
+                                <option>Ədliyyə sənədləri</option>
+                                <option>Məhkəmə sənədləri</option>
+                                <option>Əmlak sənədləri</option>
+                                <option>Vergi sənədləri</option>
+                                <option>Nəqliyyat vasitələrinə aid sənədlər</option>
+                                <option>Xarici vətandaşlara aid sənədlər</option>
+                            </select>
+                            <div class="username"><input type="text" name="Ad" value="Ad*"></div>
+                            <div class="usersurname"><input type="text" name="Soyadı" value="Soyad"></div>
+                            <div class="miniboxinbox"><span>Axtar</span></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bigdivtwo">
+                <div class="lastdoc">
+                    <h1>ƏN SON TAPILAN SƏNƏDLƏR</h1>
+                </div>
+                <div class="container">
+                    <div class="divbox1">
+                            <i class="far fa-address-card"></i>
+                        <section>
+                            <span class="name"><b>GÜNEL MƏMMƏDOVA</b></span><br>
+                            <span>Şəxsiyyət vəsiqəsi 16 yaş yuxarı şəkilli</span>
+                        </section>
+                    </div>
+                    <div class="divbox2">
+                            <i class="far fa-address-card"></i>
+                         <section>
+                         <span class="name"><b>PƏRVİZ MAMEDOV</b></span><br>
+                         <span>Nikah haqqında şəhadətnamə</span>
+                        </section>
+                    </div>
+                    <div class="divbox3">
+                            <i class="far fa-address-card"></i>
+                        <section>
+                            <span class="name"><b>ELİDA MƏMMƏDOVA</b></span><br>
+                            <span>Doğum haqqında şəhadətnamə</span>
+                        </section>
+                    </div>
+                    <div class="divbox4">
+                            <i class="far fa-address-card"></i>
+                       <section>
+                           <span><b>RÖYAL NURUYEV</b></span><br>
+                           <span>Yeni nəsil şəxsiyyət vəsiqəsi</span>
+                       </section>
+                    </div>
+                    <div class="divbox5">
+                            <i class="far fa-address-card"></i>
+                            <section>
+                                <span><b>AFƏT CƏFƏROVA</b></span><br>
+                                <span>Şəxsiyyət vəsiqəsi 16 yaş yuxarı şəkilli</span>
+                            </section>
+                    </div>
+                    <div class="divbox6">
+                            <i class="far fa-address-card"></i>
+                            <section>
+                                <span><b>NURLAN ABBASƏLİYEV</b></span><br>
+                                <span>Şəxsiyyət vəsiqəsi 16 yaş yuxarı şəkilli</span>
+                            </section>
+                    </div>
+                    <div class="divbox7">
+                            <i class="far fa-address-card"></i>
+                            <section>
+                                <span><b>ELVİN AĞAYEV</b></span><br>
+                                <span>Şəxsiyyət vəsiqəsi 16 yaş yuxarı şəkilli</span>
+                            </section>
+                    </div>
+                    <div class="divbox8">
+                            <i class="far fa-address-card"></i>
+                            <section>
+                                <span><b>GÜNAY QARAYEVA</b></span><br>
+                                <span>Şəxsiyyət vəsiqəsi 16 yaş yuxarı şəkilli</span>
+                            </section>
+                        </div>
+                </div>
+                <div class="containermore">
+                    <div class="more">
+                        <button><a href="">DAHA ÇOX</a></button>
+                    </div>
+                </div>
+                <div class="bigiconscontainer">
+                    <div class="iconone">
+                        <img src="https://www.pochtap.az/Images/ico-1.png" alt="list"><br>
+                       <h4>Sənədi tapan şəxs istənilən poçt şöbəsinə təhvil verir</h4>
+                        </div>
+                    <div class="icontwo">
+                        <img src="https://www.pochtap.az/Images/ico-2.png" alt="lupa"><br>
+                        <h4>Poçt şöbəsi sənədon üzərində adı olan şəxsin məlumatlarını əldə edərək əlaqə qurmağa çalışır</h4>
+                       </div>
+                    <div class="iconthree">
+                        <img src="https://www.pochtap.az/Images/ico-3.png" alt="adsvg"><br>
+                        <h4>Əgər vətandaşla əlaqə saxlanılmışdıra vətəndaş ona deyilən poçt şöbəsinə yaxınlaşaraq sənədini əldə edə bilər</h4>
+                        </div>
+                </div><hr>
+                <footer>
+                    <div class="footercontainer">
+                    <div class="leftfoot">
+                        <i class="fas fa-haykal"></i>
+                        <span class="arr">AZƏRBAYCAN RESPUBLİKASI RABİTƏ VƏ YÜKSƏK TEXNOLOGİYALAR NAZİRLİYİ</span>
+                    <!-- <div class="pocht"><span>POÇTAP</span></div> -->
+                    </div>
+                    <div class="poct"><span>POÇTAP</span></div>
+                    <div class="rightfoot">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>169</span>
+                    </div>
+                </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
